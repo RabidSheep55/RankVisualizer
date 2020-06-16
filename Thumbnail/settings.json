@@ -4,5 +4,8 @@
   "x_title": null,
   "show_y_labels": false,
   "y_title": null,
-  "title": null
+  "title": null,
+  "height": 1.9,
+  "width": 1.6,
+  "dpi": 400
 }
