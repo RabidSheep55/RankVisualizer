@@ -2,11 +2,16 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import json
 
-### Import data from file
+### Import data and settings from files
+print("Loading data... ", end='')
 with open("data.json", 'r') as file:
-    raw = json.load(file)
-    settings = raw["settings"]
-    data = raw["data"]
+    data = json.load(file)
+print("Done")
+
+print("Loading settings... ", end='')
+with open("settings.json", 'r') as file:
+    settings = json.load(file)
+print("Done")
 
 ### Plot results
 fig, ax = plt.subplots(constrained_layout=True)
@@ -16,6 +21,7 @@ rainbowCycle = mpl.cycler(color=['C12F1D', 'D94E1F', 'F16C20', 'EF8B2C', 'ECAA38
 ax.set_prop_cycle(rainbowCycle)
 
 # Plot data from file
+print("Plotting data... ", end='')
 x = settings["x_data"]
 initOrder = list(data.keys())
 for k in initOrder:
@@ -24,8 +30,10 @@ for k in initOrder:
 
 # When using ranks, 1 is best (need to invert axis)
 ax.invert_yaxis()
+print("Done")
 
 ### Plot settings
+print("Applying settings... ", end='')
 plt.tick_params(
     axis="both",
     bottom=False,
@@ -56,6 +64,7 @@ ax.margins(x=0, y=0)
 bg = "#ecf0f1"
 fig.patch.set_facecolor(bg)
 ax.set_facecolor(bg)
+print("Done")
 
 # Final layout settings
 fig.set_size_inches(1.6, 1.9)
