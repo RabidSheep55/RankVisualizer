@@ -1,15 +1,20 @@
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+from os.path import join
+import sys
 import json
+
+### Store path to folder containing data and settings (none selects current dir)
+folder = "" if len(sys.argv) == 1 else sys.argv[1]
 
 ### Import data and settings from files
 print("Loading data... ", end='')
-with open("data.json", 'r') as file:
+with open(join(folder, "data.json"), 'r') as file:
     data = json.load(file)
 print("Done")
 
 print("Loading settings... ", end='')
-with open("settings.json", 'r') as file:
+with open(join(folder, "settings.json"), 'r') as file:
     settings = json.load(file)
 print("Done")
 
@@ -67,6 +72,10 @@ ax.set_facecolor(bg)
 print("Done")
 
 # Final layout settings
-fig.set_size_inches(1.6, 1.9)
-fig.savefig('RankVisual.png', dpi=400, facecolor=bg, edgecolor=bg)
+fig.set_size_inches(settings["width"], settings["height"])
+
+### Save Image
+print("Saving image... ", end="")
+fig.savefig(join(folder, 'RankVisual.png'), dpi=settings["dpi"], facecolor=bg, edgecolor=bg)
+print("Done")
 plt.show()
