@@ -1,3 +1,4 @@
+![Rank Visualizer banner Image](Banner/Banner.png)
 # RankVisualizer
 Simple matplotlib based script generates a visually friendly visualization for rank evolution.
 
