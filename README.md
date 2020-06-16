@@ -41,6 +41,17 @@ In this example, we wish to visualize the evolution of car positions at each min
 *(ie Car 3 starts off at position 3, and regresses to position 5 at the first minute, its data is therefore represented with "Car 3": [3, 5, ...])*
 
 <p align="center">
+  <p>
+    ```
+    {
+      "Car 1": [1, 1, 1, 1, 2],
+      "Car 2": [2, 2, 3, 2, 1],
+      "Car 3": [3, 5, 5, 5, 5],
+      "Car 4": [4, 3, 2, 3, 4],
+      "Car 5": [5, 4, 4, 4, 3]
+    }
+    ```
+  </p>
   <img src="Example/RankVisual.png">
 </p>
 
