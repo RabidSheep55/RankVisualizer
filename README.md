@@ -1,4 +1,4 @@
-# RankVisualizer
+# RankVisualizer ![test](Tumbnail/RankVisual.png)
 Simple matplotlib based script generates a visually friendly visualization for rank evolution.
 
 ## How to use
@@ -40,19 +40,6 @@ Then, simply fill the `data.json` file with the data you want to plot! Here, a l
 In this example, we wish to visualize the evolution of car positions at each minute of a race, in order to quickly see comebacks and overtakes. In the `data.json` file, we add entries for each car's position at each minute in a list.
 *(ie Car 3 starts off at position 3, and regresses to position 5 at the first minute, its data is therefore represented with "Car 3": [3, 5, ...])*
 
-<p align="center">
-  <p>
-    ```
-    {
-      "Car 1": [1, 1, 1, 1, 2],
-      "Car 2": [2, 2, 3, 2, 1],
-      "Car 3": [3, 5, 5, 5, 5],
-      "Car 4": [4, 3, 2, 3, 4],
-      "Car 5": [5, 4, 4, 4, 3]
-    }
-    ```
-  </p>
-  <img src="Example/RankVisual.png">
-</p>
+![Example visualization](Example/RankVisual.png)
 
 We can now easily see how each car did during that race; Car 1 managed to hold its pole position for most of it, before being overtaken at the last minute by Car 2 whereas Car 3 seems to have had an extremely bad start, not being able to recover from it.
