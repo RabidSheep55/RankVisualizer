@@ -12,7 +12,7 @@ python RankVisualizer.py "PATH_TO_FOLDER"
 Firstly, setup the way you want your chart to look in the `settings.json` file, which has a structure outlined below:
 ```
 {
-  "x_data": [Scale for your horizontal axis, ...],
+  "x_data": [horizontal axis labels, ...] | null,
   "show_x_labels": true | false,
   "x_title": "X Axis Title" | null,
   "show_y_labels": true | false,

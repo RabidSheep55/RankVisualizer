@@ -27,7 +27,11 @@ ax.set_prop_cycle(rainbowCycle)
 
 # Plot data from file
 print("Plotting data... ", end='')
-x = settings["x_data"]
+if settings["x_data"]:
+    x = settings["x_data"]
+else:
+    x = list(range(len(next(iter(data.values())))))
+
 initOrder = list(data.keys())
 for k in initOrder:
     ax.plot(x, data[k], lw=2, clip_on=False)
