@@ -37,8 +37,6 @@ Then, simply fill the `data.json` file with the data you want to plot! Here, a l
 *NOTE: This visualizer is very sensitive and peculiar on how the input data is structured, rendering it not very versatile. For example, each entry needs to contain rank data for every position on the horizontal axis. If you have any ideas on how to make it more flexible, please share! :)*
 
 ### Example
-<sub>The resources for this example are stored in the `Example` folder in this repository.<sub>
-
 In this example, we wish to visualize the evolution of car positions at each minute of a race, in order to quickly see comebacks and overtakes. In the `data.json` file, we add entries for each car's position at each minute in a list.
 *(ie Car 3 starts off at position 3, and regresses to position 5 at the first minute, its data is therefore represented with "Car 3": [3, 5, ...])*
 
@@ -50,4 +48,5 @@ In this example, we wish to visualize the evolution of car positions at each min
   "Car 4": [4, 3, 2, 3, 4],
   "Car 5": [5, 4, 4, 4, 3]
 }
-``` | ![Example Visualization](Example/RankVisual.png)
+```
+![Example Visualization](Example/RankVisual.png)
